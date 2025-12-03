@@ -1,79 +1,119 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="UTF-8" />
-<meta name="viewport" content="width=device-width, initial-scale=1.0" />
-<title>Nisar Ali – Product Manager Portfolio</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Nisar Ali – Product Portfolio</title>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
 <style>
-    body { font-family: Arial, sans-serif; margin: 0; padding: 0; background: #f7f7f7; }
-    header { background: #111; color: white; padding: 40px; text-align: center; }
-    section { padding: 30px; max-width: 900px; margin: auto; }
-    h2 { margin-top: 40px; }
-    .card { background: white; padding: 20px; border-radius: 10px; margin-bottom: 20px; box-shadow: 0 0 8px rgba(0,0,0,0.1); }
-    a.button { display: inline-block; padding: 10px 20px; background: #111; color: white; text-decoration: none; border-radius: 6px; margin-top: 10px; }
+    /* Reset and base */
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+    body { font-family: 'Inter', sans-serif; line-height: 1.6; background: #f4f7f9; color: #333; }
+    a { text-decoration: none; color: inherit; }
+    img { max-width: 100%; border-radius: 10px; }
+
+    /* Header / Hero */
+    header { background: linear-gradient(135deg, #4f46e5, #6366f1); color: white; text-align: center; padding: 100px 20px 60px; }
+    header h1 { font-size: 3em; margin-bottom: 10px; }
+    header p { font-size: 1.2em; margin-bottom: 20px; }
+    .btn { display: inline-block; background: white; color: #4f46e5; padding: 12px 25px; border-radius: 8px; font-weight: 600; transition: 0.3s; }
+    .btn:hover { background: #e0e7ff; }
+
+    /* Sections */
+    section { max-width: 1000px; margin: 80px auto; padding: 0 20px; }
+    h2 { font-size: 2em; margin-bottom: 30px; color: #111827; text-align: center; }
+
+    /* Skills */
+    .skills { display: flex; flex-wrap: wrap; justify-content: center; gap: 15px; }
+    .skill { background: #fff; padding: 12px 20px; border-radius: 8px; box-shadow: 0 4px 8px rgba(0,0,0,0.05); font-weight: 500; }
+
+    /* Portfolio cards */
+    .portfolio { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 25px; }
+    .card { background: white; padding: 20px; border-radius: 12px; box-shadow: 0 8px 20px rgba(0,0,0,0.05); transition: transform 0.3s, box-shadow 0.3s; }
+    .card:hover { transform: translateY(-5px); box-shadow: 0 12px 25px rgba(0,0,0,0.1); }
+    .card h3 { margin-bottom: 12px; color: #4f46e5; }
+    .card p { font-size: 0.95em; line-height: 1.5; }
+
+    /* Contact */
+    .contact { text-align: center; }
+    .contact a { display: inline-block; margin: 10px 15px; background: #4f46e5; color: white; padding: 12px 25px; border-radius: 8px; font-weight: 600; transition: 0.3s; }
+    .contact a:hover { background: #6366f1; }
+
+    /* Footer */
+    footer { text-align: center; padding: 40px 20px; color: #6b7280; font-size: 0.9em; }
+
+    /* Responsive spacing */
+    @media (max-width: 600px) {
+        header h1 { font-size: 2.2em; }
+        header p { font-size: 1em; }
+    }
 </style>
 </head>
-
 <body>
 
+<!-- Hero Section -->
 <header>
     <h1>Nisar Ali</h1>
-    <p>Senior Product Manager | Fintech | Payments | Digital Platforms</p>
-    <a href="#" class="button">Download CV</a>
+    <p>Senior Product Manager | Fintech & Digital Platforms</p>
+    <a href="resume.pdf" class="btn" download>Download CV</a>
 </header>
 
+<!-- Skills Section -->
 <section>
-    <h2>About Me</h2>
-    <p>I am a Product Manager specialising in Payments, Retail Apps, Remittance Solutions, and Platform Automation. 
-       I combine product strategy, execution, user research, and sprint operations to ship high-impact products.</p>
-
     <h2>Core Skills</h2>
-    <ul>
-        <li>Product Strategy & Roadmapping</li>
-        <li>API & Fintech Products</li>
-        <li>Data-driven Decision Making</li>
-        <li>Release Management & Sprint Ops</li>
-        <li>User Research & UX Thinking</li>
-        <li>Automation & Efficiency</li>
-    </ul>
-
-    <h2>Product Portfolio</h2>
-
-    <div class="card">
-        <h3>Swich Retail</h3>
-        <p>Digital retail ecosystem enabling daily financial transactions for retailers. Improved transaction flows,
-           reduced complaints, and increased adoption by enhancing usability and reliability.</p>
+    <div class="skills">
+        <div class="skill">Product Strategy</div>
+        <div class="skill">Roadmapping & Prioritization</div>
+        <div class="skill">Sprint & Release Ops</div>
+        <div class="skill">Data-driven Decision Making</div>
+        <div class="skill">User Research & UX</div>
+        <div class="skill">API & Fintech Products</div>
+        <div class="skill">Automation & Dashboards</div>
     </div>
-
-    <div class="card">
-        <h3>Swich Online Payment Gateway</h3>
-        <p>Built and scaled merchant payment gateway for online payments. Enhanced approval rates and optimized merchant onboarding.</p>
-    </div>
-
-    <div class="card">
-        <h3>Swich Disbursement & Payroll Solution</h3>
-        <p>Led product for mass payouts, vendor disbursement, and automated payroll processing with bank integrations.</p>
-    </div>
-
-    <div class="card">
-        <h3>Remittance Solution</h3>
-        <p>Cross-border money transfer platform enabling instant inward settlement, compliance automation, and rate lock features.</p>
-    </div>
-
-    <div class="card">
-        <h3>Swich Retail UAE</h3>
-        <p>Launched UAE product offering international telco airtime, bundles, bill payments, vouchers, and inward remittance to Pakistan.</p>
-    </div>
-
-    <div class="card">
-        <h3>ITS Omni Portal – Intellexal Solutions</h3>
-        <p>One-window communication dashboard integrating WhatsApp, Messenger, Instagram, and email into a unified customer support interface.</p>
-    </div>
-
-    <h2>Contact</h2>
-    <p>Email: your@email.com</p>
-    <p>LinkedIn: linkedin.com/in/yourprofile</p>
 </section>
+
+<!-- Portfolio Section -->
+<section>
+    <h2>Product Portfolio</h2>
+    <div class="portfolio">
+        <div class="card">
+            <h3>Swich Retail</h3>
+            <p>Mobile app for retailers to perform digital transactions. Improved transaction flows, reduced drop-offs, and increased adoption by enhancing usability and reliability.</p>
+        </div>
+        <div class="card">
+            <h3>Swich Online Payment Gateway</h3>
+            <p>Built and scaled merchant payment gateway for online payments. Optimized merchant onboarding and increased approval rates using data-driven insights.</p>
+        </div>
+        <div class="card">
+            <h3>Swich Disbursement & Payroll Solution</h3>
+            <p>Platform for mass payouts and vendor disbursement with bank integrations. Automated payroll processing and approval workflows to reduce manual effort.</p>
+        </div>
+        <div class="card">
+            <h3>Remittance Solution</h3>
+            <p>Cross-border remittance platform enabling instant inward settlement, compliance automation, and rate-lock features for users and businesses.</p>
+        </div>
+        <div class="card">
+            <h3>Swich Retail UAE</h3>
+            <p>International telco airtime, bundles, bill payments, vouchers, and inward remittance to Pakistan. Led UAE market launch and catalog & pricing design.</p>
+        </div>
+        <div class="card">
+            <h3>ITS Omni Portal – Intellexal Solutions</h3>
+            <p>One-window communication platform integrating WhatsApp, Messenger, Instagram, and email into a unified dashboard. Built analytics and automation features.</p>
+        </div>
+    </div>
+</section>
+
+<!-- Contact Section -->
+<section class="contact">
+    <h2>Contact</h2>
+    <a href="mailto:your@email.com">Email Me</a>
+    <a href="https://www.linkedin.com/in/yourprofile" target="_blank">LinkedIn</a>
+</section>
+
+<!-- Footer -->
+<footer>
+    &copy; 2025 Nisar Ali. All rights reserved.
+</footer>
 
 </body>
 </html>
